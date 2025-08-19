@@ -1,0 +1,107 @@
+@use '../global' as *;
+
+.p-home{
+  padding: 100px 0;
+  .p-splide{
+    overflow: hidden;
+    z-index: 0;
+  }
+  .p-splide__inner{
+    @include inner;
+  }
+  .splide-wrapper{
+    position: relative;
+  }
+  .splide__track{
+    overflow: visible;
+  }
+  .splide__slide {
+    height: 500px;
+  }
+  .splide__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .splide-controller{
+    display: grid;
+    grid-template: "bar bar" auto "arw btn" auto / 1fr;
+    gap: 24px;
+  }
+  .splide__arrow{
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #E3E3E3;
+    border-radius: 4px;
+    grid-area: arw;
+  }
+  .splide__arrows{
+    display: flex;
+    gap: 1.6rem;
+  }
+  .splide__arrow:disabled{
+    color: #E3E3E3;
+  }
+  .splide__arrow--prev,
+  .splide__arrow--next{
+    --btnSize: 64px;
+    width: var(--btnSize);
+    height: var(--btnSize);
+    display: grid;
+    position: relative;
+    margin: 0;
+    flex-shrink: 0;
+    place-content: center;
+    cursor: pointer;
+  }
+  .splide__arrow--prev{
+    left: 0;
+  }
+  .splide__arrow--next{
+    right: 0;
+  }
+  .my-carousel-progress {
+    width: 100%;
+    height: 2px;
+    background: #ededed;
+    grid-area: bar;
+  }
+  .my-carousel-progress-bar {
+    height: 2px;
+    width: 0;
+    transition: width 400ms ease;
+    background: green;
+    border-radius: 1px;
+  }
+  .p-splide__btn{
+    grid-area: btn;
+  }
+  .p-splide__btn-link{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: min(100%, 240px);
+    font-weight: 700;
+    color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    background: green;
+    text-decoration: none;
+  }
+  .p-splide__btn-link-arw{
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    &::before {
+      content: '→';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      right: 0;
+      top: 50%;
+      translate: 0 -50%;
+    }
+  }
+}

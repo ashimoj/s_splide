@@ -1,0 +1,47 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Large media files
+*.mp4
+*.tiff
+*.avi
+*.flv
+*.mov
+*.wmv
+
+# localsite
+Local Sites/*
+!Local Sites/app/
+Local Sites/app/*
+!Local Sites/app/public/
+Local Sites/app/public/*
+!Local Sites/app/public/wp-content/
+Local Sites/app/public/wp-content/*
+!Local Sites/app/public/wp-content/themes/
+Local Sites/app/public/wp-content/themes/*
+!Local Sites/app/public/wp-content/themes/splide/
+Local Sites/app/public/wp-content/themes/splide/css/
+Local Sites/app/public/wp-content/themes/splide/js/
+Local Sites/app/public/wp-content/themes/splide/img/
